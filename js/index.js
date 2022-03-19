@@ -1,5 +1,4 @@
 const myModal = new bootstrap.Modal("#register-modal");
-
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
 
@@ -12,7 +11,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
 
     const email = document.getElementById("email-input").value;
     const password = document.getElementById("password-input").value;
-    const checksession = document.getElementById("session").checked;
+    const checksession = document.getElementById("session-check").checked;
 
     const account = getAccount(email);
 

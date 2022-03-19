@@ -9,8 +9,8 @@ let data = {
 
 document.getElementById("button-logout").addEventListener("click", logout);
 document.getElementById("button-transactions").addEventListener("click", function() {
-    window.location.href = "transactions.html";
-})
+    window.location.href = "transactions.html"
+});
 
 
 //adicionar lançamento
@@ -38,7 +38,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     getTotal();
 
     alert("Lançamento adicionado com sucesso.");
-})
+});
 
 checkLogin();
 
@@ -98,7 +98,9 @@ function getCashIn() {
         }
 
         document.getElementById("cash-in-list").innerHTML = cashInHtml;
+
     }
+
 }
 
 function getCashOut() {
@@ -114,6 +116,7 @@ function getCashOut() {
         } else {
             limit = cashIn.length;
         }
+        
         for (let index = 0; index < limit; index++) {
             cashInHtml += `  
             <div class="row mb-4 ">
@@ -135,7 +138,9 @@ function getCashOut() {
         }
 
         document.getElementById("cash-out-list").innerHTML = cashInHtml;
+
     }
+
 }
 
 function getTotal() {
