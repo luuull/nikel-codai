@@ -11,7 +11,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
 
     const email = document.getElementById("email-input").value;
     const password = document.getElementById("password-input").value;
-    const checksession = document.getElementById("session-check").checked;
+    const checksession = document.getElementById("session").checked;
 
     const account = getAccount(email);
 
