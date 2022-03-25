@@ -6,6 +6,7 @@ let data = {
     transactions: []
 };
 
+
 document.getElementById("button-logout").addEventListener("click", logout);
 document.getElementById("button-transactions").addEventListener("click", function() {
     window.location.href = "transactions.html";
@@ -37,12 +38,12 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     getTotal();
 
     alert("Lançamento adicionado com sucesso.");
-})
+});
 
-checkLogin();
+checkLogged();
 
 //checar login
-function checkLogin() {
+function checkLogged() {
     if (session) {
         sessionStorage.setItem("logged", session);
         logged = session;
@@ -53,11 +54,12 @@ function checkLogin() {
         return;
     }
 
-    const UserData = localStorage.getItem(logged);
-    if (UserData) {
-        data = JSON.parse(UserData);
+    const dataUser = localStorage.getItem(logged);
+    if (dataUser) {
+        data = JSON.parse(dataUser);
     }
 
+        
     getCashIn();
     getCashOut();
     getTotal();
@@ -76,21 +78,22 @@ function getCashIn() {
         } else {
             limit = cashIn.length;
         }
+
         for (let index = 0; index < limit; index++) {
             cashInHtml += `  
             <div class="row mb-4">
                 <div class="col-12">
-                <h3 class=" fs-2 ">R$ ${cashIn[index].value.toFixed(2)}</h3>
-                <div class="container p-0">
-                    <div class="row">
-                        <div class="col-12 col-md-8">
-                            <p>${cashIn[index].description}/</p>
-                        </div>
-                        <div class="col-12 col-md-3 d-flex justify-content-end">
-                            ${cashIn[index].date}
+                    <h3 class=" fs-2 ">R$ ${cashIn[index].value.toFixed(2)}</h3>
+                    <div class="container p-0">
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <p>${cashIn[index].description}/</p>
+                            </div>
+                            <div class="col-12 col-md-3 d-flex justify-content-end">
+                                ${cashIn[index].date}
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             `
