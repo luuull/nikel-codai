@@ -1,5 +1,4 @@
 const myModal = new bootstrap.Modal("#transaction-modal");
-
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
 
@@ -33,7 +32,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     getTransactions();
 
     alert("Lançamento adicionado com sucesso.");
-})
+});
 
 //checar login
 checkLogged();
