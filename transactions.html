@@ -28,7 +28,7 @@
                             <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-circle fs-4"></i>              
                             </button>
-                            <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                            <ul class="dropdown-menu logout" role="dialog" aria-labelledby="dropdownMenuButton1">
                                 <li><button class="dropdown-item" id="button-logout">Sair</button></li>
                             </ul>
                         </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col d-flex mt-4 justify-content-end">
                     <div class="text-center">
-                        <img src="./assets/images/coins-small.png " alt="nikel coins ">
+                        <img src="./assets/images/coins-small.png" alt="nikel coins">
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="transaction-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -89,7 +89,7 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="value-input" class="form-label">Valor:</label>
-                                <input type="number" step="any" class="form-control" id="value-input" aria-describedby="numberHelp">
+                                <input type="number" step="any" class="form-control" role="dialog" id="value-input" aria-describedby="numberHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="description-input" class="form-label">Descrição:</label>
@@ -113,7 +113,7 @@
                     </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn button-default" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn button-default">Adicionar</button>
                     </div>
                 </div>
