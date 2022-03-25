@@ -96,7 +96,7 @@ function getCashIn() {
             `
         }
 
-        document.getElementById("cashInList").innerHTML = cashInHtml;
+        document.getElementById("cash-in-list").innerHTML = cashInHtml;
 
     }
 
@@ -135,7 +135,7 @@ function getCashOut() {
             `
         }
 
-        document.getElementById("cashOutList").innerHTML = cashInHtml;
+        document.getElementById("cash-out-list").innerHTML = cashInHtml;
 
     }
 
