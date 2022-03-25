@@ -9,9 +9,9 @@ checkLogged();
 document.getElementById("login-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email-input").value;
-    const password = document.getElementById("password-input").value;
-    const checksession = document.getElementById("session-check").checked;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const session = document.getElementById("session").checked;
 
     const account = getAccount(email);
 
@@ -26,7 +26,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
             return;
         }
 
-        saveSession(email, checksession)
+        saveSession(email, session)
 
         window.location.href = "home.html";
     }
